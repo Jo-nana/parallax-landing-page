@@ -7,9 +7,26 @@
 <body>
   <section>
     <img src="images/background.png" alt="bg" id="background">
-    <img src="images/mountain-third.png" alt="m3" id="moutain-3">
-    <img src="images/mountain-second.png" alt="m2" id="moutain-2">
-    <img src="images/mountain-first.png" alt="m1" id="moutain-1">
+    <img src="images/mountain-third.png" alt="m3" id="mountain-3">
+    <img src="images/mountain-second.png" alt="m2" id="mountain-2">
+    <img src="images/mountain-first.png" alt="m1" id="mountain-1">
     <h2 id="text"> Breathe </h2>
   </section>
+  <script type="text/javascript">
+    const bg = document.getElementById('background');
+    const m1 = document.getElementById('mountain-1');
+    const m2 = document.getElementById('mountain-2');
+    const m3 = document.getElementById('mountain-3');
+    const text = document.getElementById('text');
+
+    window.addEventListener('scroll', function() {
+      let scroll = window.scrollY;
+
+      bg.style.top = -scroll / 1 + 'px';
+      m1.style.top = -scroll / 1.8 + 'px';
+      m2.style.top = -scroll / 1.2 + 'px';
+      m3.style.top = -scroll / 1 + 'px';
+      text.style.top = scroll * 0.5 + 'px';
+    });
+  </script>
 </body>
